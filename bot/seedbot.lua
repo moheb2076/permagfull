@@ -54,7 +54,7 @@ function msg_valid(msg)
   -- Don't process outgoing messages
   if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
-    return false
+    return true
   end
 
   -- Before bot was started
@@ -213,65 +213,32 @@ function create_config( )
   config = {
     enabled_plugins = {
 	 "admin",
-    "inrealm",
-    "ingroup",
     "inpm",
-    "banhammer",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
     "set",
     "get",
-    "broadcast",
     "invite",
     "all",
-    "leave_ban",
-    "whitelist",
     "saveplug",
-    "plug",
-    "lock_username",
-    "lock_tag",
-    "lock_operator",
-    "lock_media",
-    "lock_join",
-    "lock_fwd",
-    "lock_fosh",
-    "antiemoji",
-    "lock_english",
     "cleandeleted",
-    "muteall",
     "weather",
-    "tr",
     "ping",
     "mean",
     "me",
     "patterns",
-    "kickme",
-    "kickbyfwd",
     "info",
     "azan",
-    "activeuser",
-    "expire",
     "write1",
     "time2",
     "date",
-    "filter",
     "rmsg",
-    "filterfa",
     "msg_checks",
     "stats",
     "fun",
-    "setlang",
-    "setlangfa",
     "on_off",
     "onservice",
     "supergroup",
-    "TDhelps",
-    "setwlc",
-    "lock_edit",
-    "lock_cmds"
     },
-    sudo_users = {262425848,0,tonumber(our_id)},--Sudo users
+    sudo_users = {127952353,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[permagfull v1
 An advanced administration bot based on TG-CLI written in Lua
