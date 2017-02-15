@@ -233,7 +233,7 @@ function create_config( )
     "rmsg",
     "msg_checks",
     "stats",
-    "fun",
+    "fun1",
     "on_off",
     "onservice",
     "supergroup",
