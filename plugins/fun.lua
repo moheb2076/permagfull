@@ -194,7 +194,7 @@ function run(msg, matches)
     if not is_owner(msg) then 
       return "You Are Not Allow To clean Msgs!" 
       end 
-    if tonumber(matches[3]) > 100 or tonumber(matches[3]) < 10 then 
+    if tonumber(matches[3]) > 10000 or tonumber(matches[3]) < 10 then 
       return "Minimum clean 10 and maximum clean is 100" 
       end 
    get_history(msg.to.peer_id, matches[3] + 1 , clean_msg , { chatid = msg.to.peer_id,con = matches[3]}) 
@@ -247,7 +247,7 @@ end
 if matches[1] == 'time' or matches[1] =='زمان' then 
 local url , res = http.request('http://api.gpmod.ir/time/') 
 if res ~= 200 then 
- return "No connection" 
+ return "" 
   end 
   local colors = {'blue','green','yellow','magenta','Orange','DarkOrange','red'} 
   local fonts = {'mathbf','mathit','mathfrak','mathrm'} 
@@ -569,7 +569,7 @@ end
 
 ------------------- 
 
-if matches[1] == 'broadcast' then 
+if matches[1] == 'Broadcast' then 
       if is_sudo(msg) then -- Only sudo ! 
          local data = load_data(_config.moderation.data) 
          local groups = 'groups' 
